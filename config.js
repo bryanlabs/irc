@@ -22,8 +22,8 @@ module.exports = {
   // Maximum number of history lines per channel
   maxHistory: 10000,
 
-  // Default theme - custom Plex-inspired dark theme
-  theme: "plex-dark",
+  // Default theme - Matrix Dracula (black backgrounds, green accents, Dracula colors)
+  theme: "matrix-dracula",
 
   // Prefetch URLs for link previews
   prefetch: true,

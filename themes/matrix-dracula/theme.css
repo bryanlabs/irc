@@ -1,0 +1,1065 @@
+/* Matrix Dracula Theme for The Lounge
+ * Complete standalone theme - does NOT import default.css
+ * Black backgrounds, neon green (#00ff41) accents, Dracula pink/purple text
+ */
+
+/* ========================================
+   CSS VARIABLE OVERRIDES
+   These override the defaults in style.css
+   ======================================== */
+
+:root {
+  /* Main background and body colors */
+  --body-color: #f8f8f2 !important;
+  --body-color-muted: #6272a4 !important;
+  --body-bg-color: #0a0a0a !important;
+  
+  /* Buttons and accents - all neon green */
+  --button-color: #00ff41 !important;
+  --button-text-color-hover: #000000 !important;
+  
+  /* Overlay */
+  --overlay-bg-color: #000000e6 !important;
+  
+  /* Links - neon green */
+  --link-color: #00ff41 !important;
+  
+  /* Window backgrounds - pure black */
+  --window-bg-color: #000000 !important;
+  
+  /* Headings - Dracula purple */
+  --window-heading-color: #bd93f9 !important;
+  
+  /* Markers - green and pink */
+  --date-marker-color: #00ff41 !important;
+  --unread-marker-color: #ff79c6 !important;
+  
+  /* Highlights - Dracula pink */
+  --highlight-bg-color: rgba(255, 121, 198, 0.15) !important;
+  --highlight-border-color: #ff79c6 !important;
+  
+  /* Upload progress bar */
+  --upload-progressbar-color: #00ff41 !important;
+}
+
+/* ========================================
+   GLOBAL ELEMENTS
+   ======================================== */
+
+html, body {
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
+}
+
+body {
+  color: #f8f8f2 !important;
+}
+
+/* All links */
+a, a:focus, a:hover {
+  color: #00ff41 !important;
+}
+
+a:hover {
+  color: #50fa7b !important;
+}
+
+/* ========================================
+   LOADING SCREEN
+   ======================================== */
+
+#loading {
+  background: #000000 !important;
+}
+
+#loading .window {
+  background: #0a0a0a !important;
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   SIGN-IN / CONNECT PAGES
+   ======================================== */
+
+#sign-in,
+#connect,
+.window {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #f8f8f2 !important;
+}
+
+#sign-in .container,
+#connect .container,
+.container {
+  background: #000000 !important;
+}
+
+/* Form inputs */
+.input,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  background: #0d0d0d !important;
+  background-color: #0d0d0d !important;
+  border: 1px solid #1a1a1a !important;
+  border-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+.input:focus,
+.input:hover,
+input:focus,
+input:hover,
+select:focus,
+select:hover,
+textarea:focus,
+textarea:hover {
+  border-color: #00ff41 !important;
+}
+
+.input:disabled {
+  background-color: #1a1a1a !important;
+}
+
+/* Labels */
+label {
+  color: #f8f8f2 !important;
+}
+
+/* Buttons */
+.btn {
+  background: transparent !important;
+  border: 2px solid #00ff41 !important;
+  color: #00ff41 !important;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:disabled {
+  background: #00ff41 !important;
+  color: #000000 !important;
+}
+
+.btn:active {
+  background: #00cc33 !important;
+}
+
+/* Error messages */
+#sign-in .error,
+.error {
+  color: #ff5555 !important;
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+
+#sidebar {
+  background: #050505 !important;
+  color: #b0b0b0 !important;
+}
+
+#sidebar .scrollable-area {
+  background: #050505 !important;
+}
+
+/* Channel list items */
+.channel-list-item {
+  color: #8be9fd !important;
+}
+
+.channel-list-item:hover {
+  background-color: rgba(0, 255, 65, 0.1) !important;
+  color: #00ff41 !important;
+}
+
+.channel-list-item.active {
+  background-color: rgba(0, 255, 65, 0.2) !important;
+  color: #00ff41 !important;
+}
+
+/* Lobby / Network names */
+.channel-list-item[data-type="lobby"] {
+  color: #00ff41 !important;
+}
+
+.channel-list-item[data-type="lobby"]:hover,
+.channel-list-item[data-type="lobby"].active {
+  color: #50fa7b !important;
+}
+
+/* Channel badges */
+.channel-list-item .badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #6272a4 !important;
+}
+
+.channel-list-item .badge.highlight {
+  background: #ff79c6 !important;
+  color: #000000 !important;
+}
+
+/* Not connected / parted channels */
+.channel-list-item.not-connected,
+.channel-list-item.parted-channel {
+  color: #ff5555 !important;
+}
+
+.channel-list-item.not-secure {
+  color: #ffb86c !important;
+}
+
+/* Collapse network icon */
+#sidebar .network .collapse-network-icon:before {
+  color: #00ff41 !important;
+}
+
+/* Add channel button */
+.channel-list-item[data-type="lobby"] .add-channel:before {
+  color: #00ff41 !important;
+}
+
+/* Close button on channels */
+.channel-list-item .close:before {
+  color: #00ff41 !important;
+}
+
+/* Sidebar empty message */
+#sidebar .empty {
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   FOOTER (Bottom icons: + gear ?)
+   ======================================== */
+
+#footer {
+  background: #050505 !important;
+}
+
+#footer button {
+  color: #00ff41 !important;
+}
+
+#footer button:hover,
+#footer button.active {
+  color: #50fa7b !important;
+  background-color: rgba(0, 255, 65, 0.2) !important;
+}
+
+/* Help notification dot */
+#footer .help.notified:after {
+  background: #050505 !important;
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   MAIN CHAT WINDOW
+   ======================================== */
+
+#chat {
+  background: #000000 !important;
+}
+
+#chat .chat-view {
+  background: #000000 !important;
+}
+
+#chat .chat {
+  background: #000000 !important;
+}
+
+/* Header */
+.header,
+#chat .header {
+  background: #0a0a0a !important;
+  border-bottom-color: #1a1a1a !important;
+}
+
+.header .title {
+  color: #f8f8f2 !important;
+}
+
+.header .topic {
+  color: #6272a4 !important;
+}
+
+/* Messages container */
+#chat .messages {
+  background: #000000 !important;
+}
+
+/* Message text */
+#chat .msg {
+  color: #f8f8f2 !important;
+}
+
+#chat .msg .time {
+  color: #6272a4 !important;
+}
+
+#chat .msg .content {
+  border-left-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+#chat .self .content {
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   USER COLORS - All mono green
+   ======================================== */
+
+.user,
+#chat .user,
+#chat .userlist .user,
+#chat .names .user,
+.user.color-1, .user.color-2, .user.color-3, .user.color-4, .user.color-5,
+.user.color-6, .user.color-7, .user.color-8, .user.color-9, .user.color-10,
+.user.color-11, .user.color-12, .user.color-13, .user.color-14, .user.color-15,
+.user.color-16, .user.color-17, .user.color-18, .user.color-19, .user.color-20,
+.user.color-21, .user.color-22, .user.color-23, .user.color-24, .user.color-25,
+.user.color-26, .user.color-27, .user.color-28, .user.color-29, .user.color-30,
+.user.color-31, .user.color-32 {
+  color: #00ff41 !important;
+}
+
+/* User mode headers in user list */
+#chat .user-mode:before {
+  background: #000000 !important;
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   USER LIST
+   ======================================== */
+
+#chat .userlist {
+  background: #050505 !important;
+  border-left-color: #1a1a1a !important;
+}
+
+#chat .userlist .count {
+  background: #0a0a0a !important;
+}
+
+#chat .userlist .search {
+  background: #0d0d0d !important;
+  color: #f8f8f2 !important;
+}
+
+#chat .userlist .count:before {
+  color: #00ff41 !important;
+}
+
+#chat .userlist .names {
+  background: #050505 !important;
+}
+
+/* ========================================
+   MESSAGE TYPES
+   ======================================== */
+
+/* Join/Part/Quit/Nick/Mode messages */
+#chat .msg[data-type="join"] .content,
+#chat .msg[data-type="part"] .content,
+#chat .msg[data-type="quit"] .content,
+#chat .msg[data-type="nick"] .content,
+#chat .msg[data-type="mode"] .content,
+#chat .msg[data-type="topic"] .content,
+#chat .msg[data-type="kick"] .content,
+#chat .msg[data-type="away"] .content,
+#chat .msg[data-type="back"] .content,
+#chat .msg[data-type="condensed"] .content {
+  color: #6272a4 !important;
+}
+
+/* Join icon - green */
+#chat .msg[data-type="join"] .from:before,
+#chat .msg[data-type="nick"] .from:before,
+#chat .msg[data-type="topic"] .from:before,
+#chat .msg[data-type="mode"] .from:before,
+#chat .msg[data-type="mode_channel"] .from:before,
+#chat .msg[data-type="mode_user"] .from:before,
+#chat .msg[data-type="whois"] .from:before,
+#chat .msg[data-type="invite"] .from:before,
+#chat .msg[data-type="login"] .from:before {
+  color: #00ff41 !important;
+}
+
+/* Part/Quit/Kick icons - red */
+#chat .msg[data-type="part"] .from:before,
+#chat .msg[data-type="quit"] .from:before,
+#chat .msg[data-type="kick"] .from:before,
+#chat .msg[data-type="logout"] .from:before {
+  color: #ff5555 !important;
+}
+
+/* Away/Back icons */
+#chat .msg[data-type="away"] .from:before,
+#chat .msg[data-type="back"] .from:before {
+  color: #6272a4 !important;
+}
+
+/* Action messages */
+#chat .msg[data-type="action"] .content,
+#chat .msg[data-type="action"] .from,
+#chat .msg[data-type="action"] .user {
+  color: #ffb86c !important;
+}
+
+/* Notice messages */
+#chat .msg[data-type="notice"] .content,
+#chat .msg[data-type="notice"] .time,
+#chat .msg[data-type="notice"] .user,
+#chat .msg[data-type="wallops"] .content {
+  color: #8be9fd !important;
+}
+
+/* Error messages */
+#chat .msg[data-type="error"],
+#chat .msg[data-type="error"] .from {
+  color: #ff5555 !important;
+}
+
+/* MOTD/Help/Info icons */
+#chat .msg[data-command="motd"] .from:before,
+#chat .msg[data-command="help"] .from:before,
+#chat .msg[data-command="info"] .from:before,
+#chat .msg[data-type="ctcp"] .from:before,
+#chat .msg[data-type="ctcp_request"] .from:before {
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   HIGHLIGHTED MESSAGES
+   ======================================== */
+
+#chat .chat-view[data-type="channel"] .msg.highlight {
+  background-color: rgba(255, 121, 198, 0.15) !important;
+  border-left-color: #ff79c6 !important;
+}
+
+#chat .chat-view[data-type="channel"] .msg.highlight .time {
+  color: #bd93f9 !important;
+}
+
+#chat .chat-view[data-type="channel"] .msg.highlight .content {
+  border-left-color: rgba(255, 121, 198, 0.15) !important;
+}
+
+/* ========================================
+   DATE/UNREAD MARKERS
+   ======================================== */
+
+#chat .date-marker:before {
+  border-top-color: #00ff41 !important;
+}
+
+#chat .date-marker-text:before {
+  background-color: #000000 !important;
+  color: #00ff41 !important;
+}
+
+#chat .unread-marker:before {
+  border-top-color: #ff79c6 !important;
+}
+
+#chat .unread-marker-text:before {
+  background-color: #000000 !important;
+  color: #ff79c6 !important;
+}
+
+/* ========================================
+   MESSAGE INPUT FORM
+   ======================================== */
+
+#form {
+  background: #0a0a0a !important;
+  border-top-color: #1a1a1a !important;
+}
+
+#form #input {
+  color: #f8f8f2 !important;
+  background: transparent !important;
+}
+
+#form #nick {
+  background: #1a1a1a !important;
+  color: #00ff41 !important;
+}
+
+#form #submit,
+#form #upload {
+  color: #00ff41 !important;
+}
+
+#form #submit:hover,
+#form #upload:hover {
+  color: #50fa7b !important;
+}
+
+/* ========================================
+   HEADER BUTTONS (menu, search, users, close)
+   ======================================== */
+
+#viewport .lt,
+#viewport .rt,
+#chat button.menu,
+#chat button.mentions,
+#chat button.search,
+#chat button.close {
+  color: #00ff41 !important;
+}
+
+#viewport .lt:hover,
+#viewport .rt:hover,
+#chat button.menu:hover,
+#chat button.mentions:hover,
+#chat button.search:hover,
+#chat button.close:hover {
+  color: #50fa7b !important;
+}
+
+/* ========================================
+   SCROLL DOWN BUTTON
+   ======================================== */
+
+.scroll-down-arrow {
+  background: #0a0a0a !important;
+  border-color: #00ff41 !important;
+  color: #00ff41 !important;
+}
+
+.scroll-down:hover .scroll-down-arrow {
+  background: #00ff41 !important;
+  color: #000000 !important;
+}
+
+/* ========================================
+   TOGGLE CONTENT (previews, links, images)
+   ======================================== */
+
+#chat .toggle-content {
+  background: #0d0d0d !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+#chat .toggle-content .toggle-text {
+  color: #f8f8f2 !important;
+}
+
+#chat .toggle-text .body,
+#chat .toggle-type-error {
+  color: #6272a4 !important;
+}
+
+#chat .toggle-content .more {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   CODE BLOCKS
+   ======================================== */
+
+code, .irc-monospace {
+  background-color: #1a1a1a !important;
+  color: #ff79c6 !important;
+}
+
+pre {
+  background-color: #0d0d0d !important;
+  color: #f8f8f2 !important;
+}
+
+#chat .msg[data-type="monospace_block"] .text {
+  background: #0d0d0d !important;
+}
+
+/* Keyboard keys */
+kbd {
+  background-color: #1a1a1a !important;
+  background-image: none !important;
+  border-color: #333 !important;
+  box-shadow: 0 2px 0 #333 !important;
+  color: #f8f8f2 !important;
+  text-shadow: none !important;
+}
+
+/* ========================================
+   CONTEXT MENU
+   ======================================== */
+
+#context-menu,
+.textcomplete-menu {
+  background-color: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+}
+
+.context-menu-item,
+.textcomplete-item {
+  color: #f8f8f2 !important;
+}
+
+.context-menu-item:hover,
+.context-menu-item.active,
+.textcomplete-item:hover,
+.textcomplete-item:focus,
+.textcomplete-menu .active {
+  background-color: rgba(0, 255, 65, 0.2) !important;
+  color: #00ff41 !important;
+}
+
+.context-menu-divider {
+  background-color: #1a1a1a !important;
+}
+
+/* Context menu icons */
+.context-menu-item:before {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   TOOLTIPS
+   ======================================== */
+
+.tooltipped:after {
+  background: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+.tooltipped:before {
+  border-bottom-color: #1a1a1a !important;
+  border-top-color: #1a1a1a !important;
+  border-left-color: #1a1a1a !important;
+  border-right-color: #1a1a1a !important;
+}
+
+.tooltipped-s:before,
+.tooltipped-se:before,
+.tooltipped-sw:before {
+  border-bottom-color: #1a1a1a !important;
+}
+
+.tooltipped-n:before,
+.tooltipped-ne:before,
+.tooltipped-nw:before {
+  border-top-color: #1a1a1a !important;
+}
+
+.tooltipped-e:before {
+  border-right-color: #1a1a1a !important;
+}
+
+.tooltipped-w:before {
+  border-left-color: #1a1a1a !important;
+}
+
+/* ========================================
+   SETTINGS PAGE
+   ======================================== */
+
+#settings {
+  background: #000000 !important;
+}
+
+#settings h2,
+#settings h3,
+.window h2,
+.window h3 {
+  color: #bd93f9 !important;
+  border-bottom-color: #1a1a1a !important;
+}
+
+#settings .opt {
+  color: #f8f8f2 !important;
+}
+
+#settings #play {
+  color: #00ff41 !important;
+}
+
+/* Sync panel */
+#settings .settings-sync-panel {
+  background-color: rgba(139, 233, 253, 0.1) !important;
+  color: #8be9fd !important;
+}
+
+/* Version checker */
+#version-checker.loading {
+  background-color: rgba(139, 233, 253, 0.1) !important;
+  color: #8be9fd !important;
+}
+
+#version-checker.new-version,
+#version-checker.new-packages {
+  background-color: rgba(255, 184, 108, 0.1) !important;
+  color: #ffb86c !important;
+}
+
+#version-checker.error {
+  background-color: rgba(255, 85, 85, 0.1) !important;
+  color: #ff5555 !important;
+}
+
+#version-checker.up-to-date {
+  background-color: rgba(0, 255, 65, 0.1) !important;
+  color: #00ff41 !important;
+}
+
+/* Settings menu */
+.settings-menu button {
+  color: #6272a4 !important;
+}
+
+.settings-menu button:hover,
+.settings-menu button.active {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   HELP PAGE
+   ======================================== */
+
+#help {
+  background: #000000 !important;
+}
+
+#help .help-item .subject {
+  color: #8be9fd !important;
+}
+
+#help .help-item .description {
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   CHANGELOG PAGE
+   ======================================== */
+
+#changelog {
+  background: #000000 !important;
+}
+
+#changelog h3 {
+  color: #bd93f9 !important;
+  border-bottom-color: #1a1a1a !important;
+}
+
+.changelog-text {
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   MENTIONS POPUP
+   ======================================== */
+
+.mentions-popup {
+  background-color: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+}
+
+.mentions-popup .msg .content {
+  background-color: rgba(255, 121, 198, 0.15) !important;
+}
+
+/* ========================================
+   CONFIRM DIALOG
+   ======================================== */
+
+#confirm-dialog {
+  background: #0d0d0d !important;
+}
+
+#confirm-dialog .confirm-buttons {
+  background: #1a1a1a !important;
+}
+
+/* ========================================
+   IMAGE VIEWER
+   ======================================== */
+
+#image-viewer .close-btn,
+#image-viewer .open-btn,
+#image-viewer .next-image-btn,
+#image-viewer .previous-image-btn {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   UPLOAD OVERLAY
+   ======================================== */
+
+#upload-overlay {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ========================================
+   JOIN FORM (in sidebar)
+   ======================================== */
+
+#sidebar .join-form .input {
+  background: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+#sidebar .join-form .btn {
+  border-color: #00ff41 !important;
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   CHANNEL LIST / BAN LIST / TABLES
+   ======================================== */
+
+#chat table.channel-list td,
+#chat table.channel-list th,
+#chat table.ban-list td,
+#chat table.ban-list th,
+#chat table.ignore-list th,
+#chat table.invite-list td,
+#chat table.invite-list th {
+  border-bottom-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  background-color: #0a0a0a !important;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: #1a1a1a !important;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: #333 !important;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background: #00ff41 !important;
+}
+
+/* ========================================
+   SHOW MORE BUTTON
+   ======================================== */
+
+#chat .show-more .btn {
+  border-color: #00ff41 !important;
+  color: #00ff41 !important;
+}
+
+#chat .show-more .btn:hover {
+  background: #00ff41 !important;
+  color: #000000 !important;
+}
+
+/* ========================================
+   SEARCH FORM
+   ======================================== */
+
+form.message-search input {
+  background-color: #0d0d0d !important;
+  color: #f8f8f2 !important;
+}
+
+form.message-search .input-wrapper {
+  background: #0a0a0a !important;
+}
+
+form.message-search button {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   TOPIC EDITOR
+   ======================================== */
+
+.header .topic-input {
+  background: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+.topic-container .save-topic span {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   PASSWORD REVEAL BUTTON
+   ======================================== */
+
+.password-container .reveal-password span {
+  color: #00ff41 !important;
+}
+
+.password-container .reveal-password-visible span:before {
+  color: #ff5555 !important;
+}
+
+/* ========================================
+   STATUS MESSAGE
+   ======================================== */
+
+#chat .msg-statusmsg {
+  background-color: #ffb86c !important;
+  color: #000000 !important;
+}
+
+/* ========================================
+   JUMP TO INPUT (in sidebar)
+   ======================================== */
+
+.jump-to-input .input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8f8f2 !important;
+}
+
+.jump-to-input:before {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   SESSION LIST
+   ======================================== */
+
+.session-list .session-usage {
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   NOTIFICATION DOT
+   ======================================== */
+
+#viewport .lt:after {
+  background-color: #ff79c6 !important;
+  border-color: #000000 !important;
+}
+
+/* ========================================
+   MOBILE SIDEBAR OVERLAY
+   ======================================== */
+
+#sidebar-overlay {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ========================================
+   INLINE CHANNEL LINKS
+   ======================================== */
+
+.inline-channel {
+  color: #8be9fd !important;
+}
+
+.inline-channel:hover {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   USER VISIBLE ERROR
+   ======================================== */
+
+#user-visible-error {
+  background: #ff5555 !important;
+  color: #ffffff !important;
+}
+
+/* ========================================
+   CSS TEXTAREA IN SETTINGS
+   ======================================== */
+
+textarea#user-specified-css-input {
+  background: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   PLACEHOLDER TEXT
+   ======================================== */
+
+::placeholder {
+  color: #6272a4 !important;
+  opacity: 1 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #6272a4 !important;
+}
+
+::-moz-placeholder {
+  color: #6272a4 !important;
+}
+
+:-ms-input-placeholder {
+  color: #6272a4 !important;
+}
+
+/* ========================================
+   CONDENSED MESSAGES TOGGLE
+   ======================================== */
+
+#chat .toggle-button {
+  color: #00ff41 !important;
+}
+
+#chat .toggle-content .more-caret:before {
+  color: #00ff41 !important;
+}
+
+/* ========================================
+   WHOIS / DEFINITION LIST
+   ======================================== */
+
+.whois dt {
+  color: #8be9fd !important;
+}
+
+.whois dd {
+  color: #f8f8f2 !important;
+}
+
+/* ========================================
+   EXTRA IMPORTANT OVERRIDES
+   Catch-all for any remaining defaults
+   ======================================== */
+
+/* Force all FontAwesome icons to green */
+#viewport .lt:before,
+#viewport .rt:before,
+#chat button.menu:before,
+#chat button.mentions:before,
+#chat button.search:before,
+#chat button.close:before,
+#form #submit:before,
+#form #upload:before,
+#footer .icon,
+#footer button:before,
+#sidebar .collapse-network-icon:before,
+.channel-list-item:before,
+.context-menu-item:before,
+.jump-to-input:before,
+#settings .settings-menu .icon:before,
+#help .documentation-link:before,
+#help .report-issue-link:before,
+#help .website-link:before,
+#connect .extra-help:before,
+#settings .extra-help:before,
+#version-checker:before {
+  color: #00ff41 !important;
+}
+
+/* Override any remaining hardcoded grays/whites */
+body, #app, #viewport {
+  background: #0a0a0a !important;
+}

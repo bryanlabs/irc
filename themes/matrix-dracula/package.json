@@ -1,0 +1,14 @@
+{
+  "name": "thelounge-theme-matrix-dracula",
+  "version": "1.0.0",
+  "description": "Matrix/Cyberpunk theme with Dracula accents for The Lounge",
+  "keywords": [
+    "thelounge",
+    "thelounge-theme"
+  ],
+  "thelounge": {
+    "css": "theme.css"
+  },
+  "license": "MIT"
+}
+
