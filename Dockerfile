@@ -3,8 +3,11 @@ FROM thelounge/thelounge:4.4.3
 # The Lounge stores config in /var/opt/thelounge
 # We'll use a volume for persistence
 
-# Copy custom config if needed
+# Copy custom config
 COPY config.js /var/opt/thelounge/config.js
+
+# Copy custom Plex-dark theme
+COPY themes/plex-dark.css /var/opt/thelounge/packages/themes/plex-dark.css
 
 # Expose The Lounge web interface
 EXPOSE 9000

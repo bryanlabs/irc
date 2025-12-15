@@ -22,8 +22,8 @@ module.exports = {
   // Maximum number of history lines per channel
   maxHistory: 10000,
 
-  // Default theme
-  theme: "morning",
+  // Default theme - custom Plex-inspired dark theme
+  theme: "plex-dark",
 
   // Prefetch URLs for link previews
   prefetch: true,
