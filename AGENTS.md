@@ -34,7 +34,7 @@ A thin Docker wrapper around [The Lounge](https://thelounge.chat/) (v4.4.3), a s
 ```bash
 # CI builds automatically on push to main (GitHub Actions -> GHCR)
 # Manual local build (amd64):
-docker buildx build --builder cloud-bryanlabs-builder --platform linux/amd64 \
+docker buildx build --builder worker1 --platform linux/amd64 \
   -t ghcr.io/bryanlabs/irc:latest --push .
 ```
 
